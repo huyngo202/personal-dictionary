@@ -25,17 +25,6 @@ public class Trie {
         return root;
     }
 
-    private int charToInt(char c) {
-        if (c == ' ')
-            return 26;
-        return (int) (c - 'a');
-    }
-
-    private char intToChar(int x) {
-        if (x == 26)
-            return (char) (' ');
-        return (char) (x + 'a');
-    }
 
     //    insert word en with meaning vi into trie
     public void insert(String en, String vi) {
@@ -125,4 +114,15 @@ public class Trie {
         }
     }
 
+    private int charToInt(char c) {
+        if (c == ' ')
+            return 26;
+        return (int) (c - 'a');
+    }
+
+    private char intToChar(int x) {
+        if (x == 26)
+            return (char) (' ');
+        return (char) (x + 'a');
+    }
 }
