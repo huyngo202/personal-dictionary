@@ -1,31 +1,31 @@
 public class Pair<K,E> {
-    private K key;
-    private E value;
+    private K first;
+    private E second;
 
     public Pair(K key, E value) {
-        this.key = key;
-        this.value = value;
+        this.first = key;
+        this.second = value;
     }
 
-    public K getKey() {
-        return key;
+    public K getFirst() {
+        return first;
     }
 
-    public E getValue() {
-        return value;
+    public E getSecond() {
+        return second;
     }
 
-    public void setKey(K key) {
-        this.key = key;
+    public void setFirst(K first) {
+        this.first = first;
     }
 
-    public void setValue(E value) {
-        this.value = value;
+    public void setSecond(E second) {
+        this.second = second;
     }
 
     @Override
     public String toString() {
-        return "{" + key + ", " + value + "}";
+        return "{" + first + ", " + second + "}";
     }
 }
 
