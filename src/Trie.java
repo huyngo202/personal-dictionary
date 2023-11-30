@@ -83,8 +83,8 @@ public class Trie {
     }
 
     //    suggest 20 word has common prefix with string prefix
-    public List<String> suggest(String prefix) {
-        List<String> list = new ArrayList<>();
+    public List<Pair<String,String >> suggest(String prefix) {
+        List<Pair<String,String>> list = new ArrayList<>();
         Node p = endNode(prefix);
         getCandidates(p, prefix, list);
         return list;
@@ -101,9 +101,10 @@ public class Trie {
         return p;
     }
 
-    private void getCandidates(Node p, String str, List<String> list) {
-        if(p.isEndWord)
-            list.add(str);
+    private void getCandidates(Node p, String str, List<Pair<String,String>> list) {
+        if(p.isEndWord) {
+            list.add(new Pair<>(str, p.meaning));
+        }
         if(list.size() > 20)
             return;
         for (int i = 0; i < 27; ++i) {
